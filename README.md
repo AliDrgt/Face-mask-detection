@@ -38,5 +38,31 @@ A real-time face mask detection system using OpenCV, TensorFlow, and Keras.
 ## Usage
 
 Run the face mask detection using the following command:
-```sh
-python detect_mask.py --face deploy.prototxt --model mask_detector1K.model
+    ```sh
+    python detect_mask.py --face deploy.prototxt --model mask_detector1K.model
+    ```
+
+## Arguments
+
+- `--face`: Path to the face detector model directory (default: `deploy.prototxt`)
+- `--model`: Path to the trained face mask detector model (default: `mask_detector1K.model`)
+- `--confidence`: Minimum probability to filter weak detections (default: `0.5`)
+
+## How It Works
+
+1. The script loads the serialized face detector model and the trained face mask detector model.
+2. It initializes the video stream and starts capturing frames from the webcam.
+3. For each frame, it detects faces and predicts whether they are wearing a mask or not.
+4. Bounding boxes and labels are drawn on the frame, and the results are displayed in a window.
+5. Bounding box coordinates are logged with timestamps for further analysis.
+
+
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue to discuss any changes.
+
+
+## Acknowledgments
+
+This project was created by Ali Durgut.
